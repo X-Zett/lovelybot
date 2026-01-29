@@ -87,7 +87,7 @@ async def get_random_wish(message: types.Message):
 @dp.message(Command("dates"))
 async def show_dates(message: types.Message):
     # Можно добавить управление через БД, но пока оставим списком
-    await message.answer("🗓 15 мая — Знакомство\n🗓 20 августа — Годовщина")
+    await message.answer("🗓 29 сентября 2024 года — Знакомство\n🗓 19 октября 2025 года — Начало любви❤️")
 
 async def main():
     await init_db()
@@ -97,3 +97,4 @@ async def main():
 if __name__ == "__main__":
 
     asyncio.run(main())
+
