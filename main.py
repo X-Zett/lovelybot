@@ -14,7 +14,7 @@ dp = Dispatcher()
 
 # Функция для подключения к БД
 async def get_db_connection():
-    return await asyncpg.connect(DATABASE_URL)
+    return await asyncpg.connect(DATABASE_URL, ssl='require')
 
 # Инициализация таблиц
 async def init_db():
@@ -95,4 +95,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
